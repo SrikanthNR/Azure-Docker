@@ -3,7 +3,12 @@ using Shopping.Client;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddHttpClient("ShoppingAPIClient", client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5001/api");
+});
+
+// Add services to the container.   
 builder.Services.AddControllersWithViews();
 
 builder.Services
@@ -20,6 +25,8 @@ if (!app.Environment.IsDevelopment())
 app.UseStaticFiles();
 
 app.UseRouting();
+
+
 
 app.UseAuthorization();
 
