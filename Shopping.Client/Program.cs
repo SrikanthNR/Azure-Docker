@@ -3,10 +3,19 @@ using Shopping.Client;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+var configuration = builder.Configuration;
+
 builder.Services.AddHttpClient("ShoppingAPIClient", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5000/api");
+    client.BaseAddress = new Uri(configuration["ShoppingAPIUrl"]);
 });
+
+
+//builder.Services.AddHttpClient("ShoppingAPIClient", client =>
+//{
+//    client.BaseAddress = new Uri("https://localhost:5001/api");
+//});
 
 // Add services to the container.   
 builder.Services.AddControllersWithViews();

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping.Client", "Shopping
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping.API", "Shopping.API\Shopping.API.csproj", "{D3CDBBEE-F11E-49A4-9909-6CB4D157809C}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7B7C559C-8ECE-469E-AE45-26C6798BBC86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D3CDBBEE-F11E-49A4-9909-6CB4D157809C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3CDBBEE-F11E-49A4-9909-6CB4D157809C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3CDBBEE-F11E-49A4-9909-6CB4D157809C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B7C559C-8ECE-469E-AE45-26C6798BBC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B7C559C-8ECE-469E-AE45-26C6798BBC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B7C559C-8ECE-469E-AE45-26C6798BBC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B7C559C-8ECE-469E-AE45-26C6798BBC86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  shopping.api:
+    image: ${DOCKER_REGISTRY-}shoppingapi
+    build:
+      context: Shopping.API
+      dockerfile: Dockerfile
+    environment:
+    - ASPNETCORE_Kestrel__Certificates__Default__Password=NR$17
+    - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+    volumes:
+    - ~/.aspnet/https:/https:ro
+  shopping.client:
+    image: ${DOCKER_REGISTRY-}shoppingclient
+    build:
+      context: Shopping.Client
+      dockerfile: Dockerfile
+  
+  shopping.db:
+    image: mongo
+

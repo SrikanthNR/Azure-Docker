@@ -20,7 +20,7 @@ namespace Shopping.Client.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var response = await _httpClient.GetAsync("/Product");
+            var response = await _httpClient.GetAsync("/api/Product");
 
             if (response == null)
             {
